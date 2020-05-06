@@ -55,6 +55,6 @@ function install_node() {
 
 }
 
-install_node
+install_node;
 
-done
+done;
