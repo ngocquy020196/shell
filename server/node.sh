@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function is_installed {
+function is_installed() {
   # set to 1 initially
   local return_=1
   # set to 0 if not found
@@ -9,14 +9,7 @@ function is_installed {
   echo "$return_"
 }
 
-function check_root {
-  if [ "$(id -u)" != "0" ]; then
-    echo "$(tput setaf 1)This script must be run as root"
-    exit 1
-  fi
-}
-
-function install_node {
+function install_node() {
 
   echo "Updating server"
   apt-get update
@@ -62,18 +55,6 @@ function install_node {
 
 }
 
-while test $# -gt 0; do
-  case "$1" in
-  --help)
-    echo "Help"
-    exit
-    ;;
-  --node)
-    check_root
-    install_node
-    exit
-    ;;
-  esac
+install_node
 
-  shift
 done

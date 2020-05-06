@@ -1,7 +1,7 @@
 ### 1: Install killport
 
 ```bash
-$ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ngocquy020196/shell/master/killport.sh)"
+$ curl -s https://raw.githubusercontent.com/ngocquy020196/shell/master/killport.sh | sudo bash -E -
 ```
 #### `Example`
 ```bash
@@ -13,5 +13,5 @@ $ killport 3000
 #### ```1: Node```
 
 ```bash
-$ sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/ngocquy020196/shell/master/server.sh)" --node
+$ curl -s https://raw.githubusercontent.com/ngocquy020196/shell/master/server/node.sh | sudo bash -E -
 ```
