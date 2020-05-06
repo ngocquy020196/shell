@@ -1,10 +1,5 @@
 #!/bin/sh
 
-if [ "$(id -u)" != "0" ];then
-    echo "$(tput setaf 1)This script must be run as root";
-    exit 1;
-fi
-
 rm -rf /bin/killport
 
 tee -a /bin/killport > /dev/null <<EOT
