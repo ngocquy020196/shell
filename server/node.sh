@@ -57,4 +57,4 @@ function install_node() {
 
 install_node;
 
-done;
+echo "Install success"
